@@ -1,6 +1,5 @@
-// 스크롤 시 네비게이션 바 배경 변경
+// 네비게이션 바 배경 변경
 window.addEventListener('scroll', function() {
-    const header = document.getElementById('header');
     const navbar = document.querySelector('.navbar');
     if (window.pageYOffset > 100) {
         navbar.classList.add('navbar-scrolled');
@@ -9,7 +8,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// 부드러운 스크롤 효과
+// 부드러운 스크롤
 const navLinks = document.querySelectorAll('.nav-links a');
 
 for (const link of navLinks) {

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>전영범 | Jeon YoungBeom</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 스타일 시트 링크 -->
+    <!-- 스타일 시트 -->
     <link rel="stylesheet" href="style.css">
     <!-- 아이콘 사용을 위한 Font Awesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- AOS 애니메이션 라이브러리 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- 헤더 섹션 -->
@@ -29,7 +31,7 @@
     </header>
 
     <!-- 소개 섹션 -->
-    <section id="about">
+    <section id="about" data-aos="fade-up">
         <div class="container">
             <div class="profile-pic">
                 <img src="assets/profile.jpg" alt="Profile Picture">
@@ -47,58 +49,51 @@
     </section>
 
     <!-- 기술 스택 섹션 -->
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
         <div class="container">
             <h2>기술 스택</h2>
             <div class="skills-grid">
-                <!-- 각 기술 아이콘 및 이름 -->
+                <!-- 기술 목록 -->
                 <div class="skill-item">
-                    <img src="assets/tech-icons/java.png" alt="Java">
                     <p>Java</p>
                 </div>
                 <div class="skill-item">
-                    <img src="assets/tech-icons/javascript.png" alt="JavaScript">
                     <p>JavaScript</p>
                 </div>
                 <div class="skill-item">
-                    <img src="assets/tech-icons/typescript.png" alt="TypeScript">
                     <p>TypeScript</p>
                 </div>
                 <div class="skill-item">
-                    <img src="assets/tech-icons/react.png" alt="React">
                     <p>React</p>
                 </div>
                 <div class="skill-item">
-                    <img src="assets/tech-icons/nextjs.png" alt="Next.js">
                     <p>Next.js</p>
                 </div>
-                <!-- 필요한 만큼 추가 -->
+                <!-- 추가 기술 -->
             </div>
         </div>
     </section>
 
     <!-- 프로젝트 섹션 -->
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
         <div class="container">
             <h2>프로젝트</h2>
             <div class="projects-grid">
                 <!-- 프로젝트 카드 -->
                 <div class="project-item">
-                    <img src="assets/project-images/chat-app.png" alt="Chat Application">
                     <div class="project-info">
                         <h3>채팅 어플리케이션</h3>
                         <p>Firebase와 Android(Java)를 사용한 채팅 앱 개발</p>
                         <a href="https://github.com/Boom0704/2022_chat_firebase" target="_blank" class="btn">GitHub</a>
                     </div>
                 </div>
-                <!-- 추가 프로젝트 카드 -->
-                <!-- ... -->
+                <!-- 추가 프로젝트 -->
             </div>
         </div>
     </section>
 
     <!-- 연락처 섹션 -->
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <div class="container">
             <h2>연락하기</h2>
             <form action="https://formspree.io/f/your-form-id" method="POST">
@@ -114,6 +109,8 @@
                     <label for="message">메시지</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
+                <!-- 메일 수신 주소 설정 -->
+                <input type="hidden" name="_subject" value="포트폴리오 문의">
                 <button type="submit" class="btn">보내기</button>
             </form>
         </div>
@@ -126,12 +123,16 @@
             <div class="social-icons">
                 <a href="https://github.com/Boom0704" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:playonu@naver.com"><i class="fas fa-envelope"></i></a>
-                <!-- 추가 아이콘 -->
             </div>
         </div>
     </footer>
 
-    <!-- 스크립트 링크 -->
+    <!-- 스크립트 -->
     <script src="script.js"></script>
+    <!-- AOS 애니메이션 스크립트 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
